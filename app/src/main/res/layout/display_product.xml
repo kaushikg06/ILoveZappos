@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="productResult"
+            type="com.example.kaush.ilovezappos.Result"/>
+    </data>
+
+    <RelativeLayout
+
+        android:id="@+id/product_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="com.example.kaush.zapposandroidproject.SearchableActivity">
+
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/product_name"
+            android:text="@{productResult.productName}"
+            android:textAppearance="?android:textAppearanceLarge"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/product_name"
+            android:id="@+id/brandName"
+            android:text="@{productResult.brandName}"
+            android:textAppearance="?android:textAppearanceLarge"
+            />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/brandName"
+            android:id="@+id/price"
+            android:text="@{productResult.price}"
+            android:textAppearance="?android:textAppearanceLarge" />
+
+
+
+        <include layout="@layout/floating_action" />
+
+
+    </RelativeLayout>
+</layout>
